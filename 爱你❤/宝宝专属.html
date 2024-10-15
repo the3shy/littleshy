@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宝贝小欣悦专属</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background-image: url('背景.jpg'); /* 替换为您的图片路径 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .heart {
+    width: 100px;
+    height: 90px;
+    background-color: red;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: pulse 1s infinite;
+  }
+
+  .heart:before,
+  .heart:after {
+    content: "";
+    width: 100px;
+    height: 90px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+  }
+
+  .heart:before {
+    left: 50px;
+  }
+
+  .heart:after {
+    top: -50px;
+    left: 0;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(1.1) rotate(-45deg);
+    }
+    100% {
+      transform: scale(1) rotate(-45deg);
+    }
+  }
+
+  .text {
+    color: transparent;
+    background-image: linear-gradient(to right, red, orange);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+  }
+</style>
+</head>
+<body>
+
+<div class="heart"></div>
+<div class="text">一生一世一个人</div>
+
+</body>
+</html>
